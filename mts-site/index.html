@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>МТС — Связь, которая движет вперёд</title>
+  <meta name="description" content="Мобильная связь, интернет, ТВ и цифровые сервисы. Демо-сайт в стиле МТС." />
+  <script>
+    /* Скрытое состояние для анимаций ставим только при наличии JS и без prefers-reduced-motion */
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js");
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="header" id="header">
+    <a href="#top" class="logo" aria-label="МТС, на главную">
+      <span class="logo-mark">МТС</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#tariffs">Тарифы</a>
+      <a href="#services">Услуги</a>
+      <a href="#stats">О компании</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-ghost">Войти</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+
+      <div class="hero-content">
+        <span class="badge reveal">Новое поколение связи</span>
+        <h1 class="hero-title">
+          <span class="line"><span>Связь, которая</span></span>
+          <span class="line"><span class="accent">движет вперёд</span></span>
+        </h1>
+        <p class="hero-sub reveal">
+          Мобильная связь, сверхбыстрый интернет и цифровые сервисы для дома, работы и путешествий.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#tariffs" class="btn btn-primary btn-magnetic">Выбрать тариф</a>
+          <a href="#services" class="btn btn-outline">Все услуги</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="signal">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="counter-big" data-count="5" data-suffix="G">0G</div>
+            <p class="phone-label">Скорость до 1 Гбит/с</p>
+            <div class="wave"></div>
+          </div>
+        </div>
+        <div class="float-card card-a">
+          <span class="dot"></span> Безлимит на соцсети
+        </div>
+        <div class="float-card card-b">
+          <strong>+2 ГБ</strong> в подарок
+        </div>
+      </div>
+
+      <a href="#tariffs" class="scroll-hint" aria-label="Листать вниз">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>5G</span><span>Безлимит</span><span>Домашний интернет</span><span>Облако</span><span>ТВ</span><span>Защита данных</span><span>eSIM</span>
+        <span>5G</span><span>Безлимит</span><span>Домашний интернет</span><span>Облако</span><span>ТВ</span><span>Защита данных</span><span>eSIM</span>
+      </div>
+    </section>
+
+    <!-- TARIFFS -->
+    <section class="section" id="tariffs">
+      <div class="section-head reveal">
+        <span class="eyebrow">Тарифы</span>
+        <h2>Подберите свой план</h2>
+        <p>Прозрачные условия без скрытых платежей. Переключайтесь в любой момент.</p>
+      </div>
+
+      <div class="tabs reveal" role="tablist">
+        <button class="tab active" data-filter="all" role="tab" aria-selected="true">Все</button>
+        <button class="tab" data-filter="mobile" role="tab" aria-selected="false">Мобильная связь</button>
+        <button class="tab" data-filter="home" role="tab" aria-selected="false">Дом</button>
+      </div>
+
+      <div class="cards">
+        <article class="card tilt reveal" data-type="mobile">
+          <div class="card-glow"></div>
+          <h3>Смарт</h3>
+          <p class="card-desc">Для повседневных задач</p>
+          <div class="price"><span>299</span> ₽/мес</div>
+          <ul>
+            <li>30 ГБ интернета</li>
+            <li>500 минут по России</li>
+            <li>Безлимит на мессенджеры</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block">Подключить</a>
+        </article>
+
+        <article class="card card-featured tilt reveal" data-type="mobile">
+          <div class="card-glow"></div>
+          <span class="ribbon">Хит</span>
+          <h3>Безлимит Про</h3>
+          <p class="card-desc">Максимум возможностей</p>
+          <div class="price"><span>599</span> ₽/мес</div>
+          <ul>
+            <li>Безлимитный интернет</li>
+            <li>Безлимитные минуты</li>
+            <li>5G и приоритет в сети</li>
+            <li>Подписка на ТВ-сервисы</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Подключить</a>
+        </article>
+
+        <article class="card tilt reveal" data-type="home">
+          <div class="card-glow"></div>
+          <h3>Домашний 500</h3>
+          <p class="card-desc">Оптика в квартиру</p>
+          <div class="price"><span>690</span> ₽/мес</div>
+          <ul>
+            <li>Скорость до 500 Мбит/с</li>
+            <li>Wi-Fi роутер в подарок</li>
+            <li>Домашнее ТВ на 200 каналов</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block">Подключить</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section-dark" id="services">
+      <div class="section-head reveal">
+        <span class="eyebrow">Услуги</span>
+        <h2>Всё для вашей цифровой жизни</h2>
+      </div>
+
+      <div class="services">
+        <div class="service reveal" style="--delay:0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <h3>Мобильная связь</h3>
+          <p>Покрытие 5G, eSIM и семейные тарифы.</p>
+        </div>
+        <div class="service reveal" style="--delay:1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12a10 10 0 0 1 20 0"/><path d="M5 15a7 7 0 0 1 14 0"/><circle cx="12" cy="18" r="1.5"/></svg>
+          </div>
+          <h3>Домашний интернет</h3>
+          <p>Оптоволокно до 1 Гбит/с и Wi-Fi 6.</p>
+        </div>
+        <div class="service reveal" style="--delay:2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>МТС ТВ</h3>
+          <p>Более 300 каналов и фильмы по подписке.</p>
+        </div>
+        <div class="service reveal" style="--delay:3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg>
+          </div>
+          <h3>Безопасность</h3>
+          <p>Защита от спама, мошенников и утечек.</p>
+        </div>
+        <div class="service reveal" style="--delay:4">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1A4 4 0 0 1 17 18H7z"/></svg>
+          </div>
+          <h3>Облако</h3>
+          <p>Хранилище фото и файлов с доступом с любого устройства.</p>
+        </div>
+        <div class="service reveal" style="--delay:5">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          </div>
+          <h3>Бизнес</h3>
+          <p>Связь, ИТ-решения и облачные сервисы для компаний.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" id="stats">
+      <div class="stat reveal">
+        <div class="stat-num" data-count="80" data-suffix="+">0</div>
+        <div class="stat-label">млн абонентов</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-count="1000" data-suffix="+">0</div>
+        <div class="stat-label">городов покрытия</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-count="99" data-suffix="%">0</div>
+        <div class="stat-label">довольных клиентов</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-count="24" data-suffix="/7">0</div>
+        <div class="stat-label">поддержка</div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="section cta" id="contact">
+      <div class="cta-box reveal">
+        <h2>Готовы подключиться?</h2>
+        <p>Оставьте номер — перезвоним за 5 минут и поможем выбрать тариф.</p>
+        <form class="form" id="leadForm" novalidate>
+          <div class="field">
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel" />
+            <label for="phone">Номер телефона</label>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <button type="submit" class="btn btn-primary btn-magnetic">
+            <span class="btn-text">Перезвоните мне</span>
+            <span class="btn-loader"></span>
+          </button>
+        </form>
+        <p class="form-success" id="formSuccess" hidden>Спасибо! Мы скоро позвоним.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo-mark">МТС</div>
+      <p>Демонстрационный сайт. Не является официальным ресурсом компании.</p>
+      <p class="copy">&copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
